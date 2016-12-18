@@ -104,3 +104,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /web/index.php
 ```
+##Как вставить картинку на страницу
+```
+<?= Html::img('@web/images/logo.png', ['alt'=>'some', 'class'=>'thing']);?> 
+```
+В папке web создаем папку images. Или иначе ее называем. Кладем туда все картинки.
+Можно располагать картинки гду угодно, это только самый простой вариант, если не трогать конфиги. 
+
+##Как подключить css
+domains\advanced\frontend\assets\AppAsset.php
+в этом же файле настраиваются пути к картинкам и другим ресурсам
