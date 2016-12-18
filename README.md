@@ -134,8 +134,12 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-								
+
+...
+
  <?= $content ?>
+
+...
 
 <?php $this->endBody() ?>
 </body>
