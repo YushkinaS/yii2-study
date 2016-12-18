@@ -16,6 +16,7 @@ composer create-project --prefer-dist yiisoft/yii2-app-advanced advanced
 ```
 или
 другой репозиторий с проектом
+
 последнее слово - любое имя папки. Потом ее все равно удалим и перенесем содержимое на уровень выше
 
 https://github.com/settings/tokens/new?scopes=repo&description=Composer
