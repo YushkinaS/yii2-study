@@ -109,8 +109,37 @@ RewriteRule . /web/index.php
 <?= Html::img('@web/images/logo.png', ['alt'=>'some', 'class'=>'thing']);?> 
 ```
 В папке web создаем папку images. Или иначе ее называем. Кладем туда все картинки.
-Можно располагать картинки гду угодно, это только самый простой вариант, если не трогать конфиги. 
+Теоретически можно располагать картинки где угодно, это только самый простой вариант, если не трогать конфиги. 
 
 ##Как подключить css
 domains\advanced\frontend\assets\AppAsset.php
 в этом же файле настраиваются пути к картинкам и другим ресурсам
+
+##Layout
+domains\advanced\frontend\views\layouts\main.php 
+```
+use common\widgets\Alert;
+
+AppAsset::register($this);
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+</head>
+<body>
+<?php $this->beginBody() ?>
+								
+ <?= $content ?>
+
+<?php $this->endBody() ?>
+</body>
+</html>
+<?php $this->endPage() ?>
+```
+
