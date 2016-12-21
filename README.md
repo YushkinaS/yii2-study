@@ -148,3 +148,25 @@ AppAsset::register($this);
 <?php $this->endPage() ?>
 ```
 
+##Имена таблиц и модели
+
+Модель по умолчанию
+```
+<?php
+
+namespace app\models;
+
+use yii\db\ActiveRecord;
+
+class Word1Word2Word3 extends ActiveRecord
+{
+}
+```
+помещается в файл с тем же именем, что и у класса
+соответствует таблице БД с именем word1_word2_word3 (camelcase переводится в подчеркивания между словами)
+
+##Как вставить ссылку и другие html теги
+```
+<?= Html::a('Profile', ['user/view', 'id' => $id], ['class' => 'profile-link']) ?>
+```
+http://www.yiiframework.com/doc-2.0/guide-helper-html.html
