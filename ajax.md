@@ -19,7 +19,6 @@ controller/action
 view
 ```
 <?php
-use yii\helpers\Html;
 use yii\helpers\Url;
 ?>
 	<a href="" class="test-ajax">test ajax</a>
@@ -43,6 +42,6 @@ use yii\helpers\Url;
     });
 JS;
 $this->registerJs($js);
-	?>
+?>
 ```
 
