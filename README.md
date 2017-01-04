@@ -21,13 +21,13 @@ composer create-project --prefer-dist yiisoft/yii2-app-advanced advanced
 
 https://github.com/settings/tokens/new?scopes=repo&description=Composer
 
-
+___
 только для advanced
 ```
 init
 ```
 Выбираем [0] Development и вводим yes 
-
+___
 
 Теперь можем перенести наш проект на уровень выше, то есть скопироваться все файлы из папки basic или advanced в папку yii.loc.
 
@@ -44,12 +44,12 @@ init
         ],  и т.д...
 ```
  
- 
+ ___
  только для advanced
 ```
  yii migrate
 ```
-
+___
 
 http://yii.loc/web/
 
