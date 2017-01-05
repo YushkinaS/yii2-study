@@ -32,7 +32,7 @@ ___
 
 Создать БД
 Прописать ее название в common/config/main-local.php. 
-```
+```php
         'components' => [
         'db' => [
         'class' => 'yii\db\Connection',
