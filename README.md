@@ -6,7 +6,7 @@
 
 
 ##Как вставить картинку на страницу
-```
+```php
 <?= Html::img('@web/images/logo.png', ['alt'=>'some', 'class'=>'thing']);?> 
 ```
 В папке web создаем папку images. Или иначе ее называем. Кладем туда все картинки.
@@ -18,7 +18,7 @@ domains\advanced\frontend\assets\AppAsset.php
 
 ##Layout
 domains\advanced\frontend\views\layouts\main.php 
-```
+```php
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -51,7 +51,7 @@ AppAsset::register($this);
 ##Имена таблиц и модели
 
 Модель по умолчанию
-```
+```php
 <?php
 
 namespace app\models;
@@ -67,7 +67,7 @@ class Word1Word2Word3 extends ActiveRecord
 соответствует таблице БД с именем word1_word2_word3 (camelcase переводится в подчеркивания между словами)
 
 ##Как вставить ссылку и другие html теги
-```
+```php
 <?= Html::a('Profile', ['user/view', 'id' => $id], ['class' => 'profile-link']) ?>
 ```
 http://www.yiiframework.com/doc-2.0/guide-helper-html.html
