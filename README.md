@@ -4,14 +4,6 @@
 - [ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
 - [ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
 
-
-##Загрузка модели из массива
-Провозилась с этой штукой. Вот тут человек написал, [как сделать](https://toster.ru/q/349316) - спасибо ему
-
-```php
-$model->load(['MyModel' => ['name' => 'Vasia']]);
-```
-
 ##Как вставить картинку на страницу
 ```php
 <?= Html::img('@web/images/logo.png', ['alt'=>'some', 'class'=>'thing']);?> 
