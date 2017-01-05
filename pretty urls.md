@@ -2,7 +2,7 @@
 
 domains\advanced\frontend\config\main.php
 раскомментировать
-```
+```php
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
@@ -54,7 +54,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /web/index.php
 ```
 Как писать правила:
-```
+```php
 'rules' => [
         'catalog/<category:[^/]+>' => 'catalog',
         'catalog/<category:[^/]+>/<subcategory:[^/]+>' => 'catalog',
@@ -68,7 +68,7 @@ RewriteRule . /web/index.php
 Правила, которые я написала, позволят передать контроллеру параметр category, если нужна страница категории (например, товаров). И параметры category и subcategory, если нужна страница подкатегории.
 
 Но в реальности для такой задачи придется писать класс UrlRule. Потому что категории и подкатегории могут быть не любыми, а должны соответствовать БД. [Вот этот класс](https://github.com/YushkinaS/yii2-study/blob/master/CatalogUrlRule). Подключать его  так:
-```
+```php
 'urlManager' => [
         'enablePrettyUrl' => true,
         'showScriptName' => false,
