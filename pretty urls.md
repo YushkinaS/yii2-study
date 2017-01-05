@@ -8,7 +8,7 @@ domains\advanced\frontend\config\main.php
             'showScriptName' => false,
             'rules' => [
             ],
-        ],``
+        ],
 ```
 и создать .htaccess в корне (domains\advanced\)
 http://byprofox.ru/lessons/lessons-yii-2/pravilnyj-htaccess-dlya-yii-2-0/
