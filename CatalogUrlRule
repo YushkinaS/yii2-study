@@ -1,0 +1,56 @@
+<?php
+namespace app\components;
+
+use Yii;
+use yii\web\UrlRuleInterface;
+use yii\base\Object;
+use yii\web\UrlRule;
+
+class CatalogUrlRule implements UrlRuleInterface
+{
+
+    public function createUrl($manager, $route, $params)
+    {
+        if ($route === 'catalog/index') {//можно добавить strtolower
+            if (isset($params['category'], $params['subcategory'])) {
+                return 'catalog/' . $params['category'] . '/' . $params['subcategory'];
+            } elseif (isset($params['category'])) {
+                return 'catalog/' . $params['category'];
+            }
+        }
+        return false;  // данное правило не применимо
+    }
+
+    public function parseRequest($manager, $request) //в запросах параметры устанавливать, не использовать конкатенацию
+    {
+        $pathInfo = $request->getPathInfo();
+        if (preg_match('%^catalog/(\w+)(/(\w+))?$%', $pathInfo, $matches)) {
+
+			
+			if ( empty($matches[2]) ) {
+				$cat = Yii::$app->db->createCommand('SELECT * FROM catalog_structure WHERE category LIKE "'.$matches[1].'"')
+						->queryColumn();
+				if ( !empty($cat) ) {
+					$params['category'] = strtolower($matches[1]);
+					return ['catalog/index',$params];
+				}
+			}
+			else {
+				$subcat = Yii::$app->db->createCommand('SELECT * FROM catalog_structure WHERE category LIKE "'.$matches[1].'" AND subcategory LIKE  "'.$matches[3].'"')
+						->queryAll();
+				if ( !empty($subcat) ) {
+					$params['category'] = strtolower($matches[1]);
+					$params['subcategory'] = strtolower($matches[3]);
+					return ['catalog/index',$params];
+				}
+			}
+
+
+						
+
+
+			
+        }
+        return false;  // данное правило не применимо
+    }
+}
