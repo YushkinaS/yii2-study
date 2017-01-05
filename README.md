@@ -1,8 +1,8 @@
 
 
--[установка под Openserver](https://github.com/YushkinaS/yii2-study/blob/master/instal%20for%20Openserver.md)
--[ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
--[ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
+- [установка под Openserver](https://github.com/YushkinaS/yii2-study/blob/master/instal%20for%20Openserver.md)
+- [ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
+- [ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
 
 
 ##Как вставить картинку на страницу
