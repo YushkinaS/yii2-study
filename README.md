@@ -4,7 +4,8 @@
 - [ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
 - [ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
 
-##Поведения
+##Поведения 
+[дока](http://www.yiiframework.com/doc-2.0/guide-concept-behaviors.html)
 какой-то общий функционал, мало зависящий от конкретного компонента
 например, часто нужно получить ActiveDataProvider из ActiveQuery
 чтобы не засорять этой ерундой код, я создаю [поведение](https://github.com/YushkinaS/yii2-study/blob/master/CreateDataProviderBehavior.php), подключаю его к модели
