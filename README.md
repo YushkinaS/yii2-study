@@ -4,6 +4,20 @@
 - [ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
 - [ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
 
+##Поведения
+какой-то общий функционал, мало зависящий от конкретного компонента
+например, часто нужно получить ActiveDataProvider из ActiveQuery
+чтобы не засорять этой ерундой код, я создаю [поведение](https://github.com/YushkinaS/yii2-study/blob/master/CreateDataProviderBehavior.php), подключаю его к модели
+```php
+    public function behaviors()
+    {
+        return [
+            \app\components\CreateDataProviderBehavior::className(),
+        ];
+    }
+```
+и использую методы поведения как родные методы модели.
+
 ##var_dump откуда угодно
 ```php
 Yii::warning('**********************', var_export($var,true));
