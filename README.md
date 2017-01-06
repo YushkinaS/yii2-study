@@ -4,6 +4,11 @@
 - [ЧПУ](https://github.com/YushkinaS/yii2-study/blob/master/pretty%20urls.md)
 - [ajax](https://github.com/YushkinaS/yii2-study/blob/master/ajax.md)
 
+##var_dump откуда угодно
+```php
+Yii::warning('**********************', var_export($var,true));
+```
+
 ##Как вставить картинку на страницу
 ```php
 <?= Html::img('@web/images/logo.png', ['alt'=>'some', 'class'=>'thing']);?> 
