@@ -9,14 +9,14 @@ class CreateDataProviderBehavior extends Behavior
     /**
      * Create ActiveDataProvider
      * @param \yii\db\ActiveQuery $query
-	 * @param array $pagination
+     * @param array $pagination
      * @return \yii\data\ActiveDataProvider
      */
     public function createDataProvider($query,$pagination=false)
     {
-		$dataProvider = new ActiveDataProvider([
+        $dataProvider = new ActiveDataProvider([
             'query' => $query,
-			'pagination' => $pagination,
+            'pagination' => $pagination,
         ]);
         return $dataProvider ;
     }
