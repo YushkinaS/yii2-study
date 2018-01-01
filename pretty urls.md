@@ -76,6 +76,8 @@ RewriteRule . /web/index.php
 'rules' => [
         'catalog/<category:[^/]+>' => 'catalog',
         'catalog/<category:[^/]+>/<subcategory:[^/]+>' => 'catalog',
+        'blog' => 'post/index', //более узкое правило должно быть выше, чем более общее!
+        '<action:[^/]+>' => 'site/<action>',
 ],
 ```
 В wordpress мы писали регулярку под весь урл сразу, выделяя группы.
