@@ -11,6 +11,24 @@ domains\advanced\frontend\config\main.php
         ],
 ```
 и создать .htaccess в корне (domains\advanced\)
+
+АПД. Можно сделать лучше.
+В Openserver-Настройки-Домены создать два домена для папок Фронтенд и Бэкенд
+![скриншот настройки доменов](https://github.com/YushkinaS/yii2-study/blob/master/%D0%B4%D0%BE%D0%BC%D0%B5%D0%BD%D1%8B.png?raw=true)
+
+И в каждую папку положить такой .htaccess
+```
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} ^/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php
+```
+
+Ниже версия из интернета
 http://byprofox.ru/lessons/lessons-yii-2/pravilnyj-htaccess-dlya-yii-2-0/
 я пробовала по этой ссылке файл для advanced приложения, заработало сразу
 ```
