@@ -94,3 +94,13 @@ http://www.yiiframework.com/doc-2.0/guide-helper-html.html
 ##Body Class
 http://www.yiiframework.com/forum/index.php/topic/28849-body-classes-based-on-url/
 еще не освоено
+
+beforeAction у контроллера
+```
+public function beforeAction($action)
+{
+ if (in_array($action->id, ['index'])) {
+ $this->enableCsrfValidation = false;
+ }
+ return parent::beforeAction($action);
+}```
